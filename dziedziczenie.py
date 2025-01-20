@@ -14,4 +14,13 @@ class Student(Osoba):
 
     def przedstaw_sie(self):
         return f"Jestem studentem. {super().przedstaw_sie()} Mój numer indeksu to {self.numer_indeksu}."
+        
+class Wykładowca(Osoba):
+    def __init__(self, imie, nazwisko, przedmiot):
+        super().__init__(imie, nazwisko)
+        self.przedmiot = przedmiot
+
+    def przedstaw_sie(self):
+        return f"Jestem wykładowcą. {super().przedstaw_sie()} Prowadzę zajęcia z {self.przedmiot}."
+
 
